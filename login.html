@@ -59,11 +59,11 @@
 
         <div>
             <label>Escolaridade:</label>
-            <input type="checkbox" id="fundamental" value="Ensino Fundamental">
             <label for="fundamental">Ensino Fundamental</label>
+            <input type="checkbox" id="fundamental" value="Ensino Fundamental">
 
-            <input type="checkbox" id="medio" value="Ensino Médio">
             <label for="medio">Ensino Médio</label>
+            <input type="checkbox" id="medio" value="Ensino Médio">
         </div>
 
         <div>
@@ -116,21 +116,19 @@
                 return;
             }
 
-            const dadosUsuario = {
-                nome,
-                email,
-                senha,
-                nascimento,
-                idade,
-                sexo: sexoSelecionado,
-                escolaridade,
-                estado
-            };
+            let objetoEnvio = {};
 
-            console.log(dadosUsuario);
+            objetoEnvio.nome = nome;
+            objetoEnvio.email = email;
+            objetoEnvio.senha = senha;
+            objetoEnvio.confirmarSenha = confirmarSenha;
+            objetoEnvio.nascimento = nascimento;
+            objetoEnvio.idade = idade;
+            objetoEnvio.sexo = sexo;
+            objetoEnvio.escolaridade = escolaridade;
+            objetoEnvio.estado = estado;
 
-            document.getElementById('resultado').textContent = JSON.stringify(dadosUsuario, null, 4);
-        
+            console.log(objetoEnvio);
         }
     </script>
 </body>
